@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SidePanelView">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KAf-86-ViA">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <subviews>
+                        <visualEffectView opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m8F-sr-3mG">
+                            <rect key="frame" x="0.0" y="0.0" width="420" height="600"/>
+                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="n0d-fU-XM0">
+                                <rect key="frame" x="0.0" y="0.0" width="420" height="600"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </view>
+                            <color key="backgroundColor" red="0.10980392156862745" green="0.14901960784313725" blue="0.18823529411764706" alpha="1" colorSpace="calibratedRGB"/>
+                            <blurEffect style="dark"/>
+                        </visualEffectView>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" keyboardDismissMode="interactive" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="NNf-cL-KkQ">
+                            <rect key="frame" x="0.0" y="0.0" width="420" height="600"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        </tableView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="NNf-cL-KkQ" secondAttribute="bottom" id="4bt-GD-vXo"/>
+                        <constraint firstItem="NNf-cL-KkQ" firstAttribute="width" secondItem="KAf-86-ViA" secondAttribute="width" multiplier="0.7" id="FFN-xs-AmN"/>
+                        <constraint firstAttribute="bottom" secondItem="m8F-sr-3mG" secondAttribute="bottom" id="Jyf-YL-hQA"/>
+                        <constraint firstItem="m8F-sr-3mG" firstAttribute="width" secondItem="NNf-cL-KkQ" secondAttribute="width" id="SX7-Eb-6N8"/>
+                        <constraint firstItem="m8F-sr-3mG" firstAttribute="top" secondItem="KAf-86-ViA" secondAttribute="top" id="gcF-mq-Gim"/>
+                        <constraint firstItem="NNf-cL-KkQ" firstAttribute="top" secondItem="KAf-86-ViA" secondAttribute="top" id="hqZ-1N-SbN"/>
+                        <constraint firstItem="NNf-cL-KkQ" firstAttribute="leading" secondItem="KAf-86-ViA" secondAttribute="leading" id="oIl-8A-lcj"/>
+                        <constraint firstItem="m8F-sr-3mG" firstAttribute="leading" secondItem="KAf-86-ViA" secondAttribute="leading" id="vhs-Qo-9FK"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="KAf-86-ViA" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="1EU-9e-RFD"/>
+                <constraint firstAttribute="bottom" secondItem="KAf-86-ViA" secondAttribute="bottom" id="1nL-0k-WED"/>
+                <constraint firstAttribute="trailing" secondItem="KAf-86-ViA" secondAttribute="trailing" id="K4C-tY-5QR"/>
+                <constraint firstItem="KAf-86-ViA" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ffl-MJ-BJV"/>
+            </constraints>
+            <connections>
+                <outlet property="leadingConstraint" destination="oIl-8A-lcj" id="VaB-tG-XbW"/>
+                <outlet property="sidePanelTableView" destination="NNf-cL-KkQ" id="Mfc-BD-cBl"/>
+            </connections>
+        </view>
+    </objects>
+</document>
